@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const FlashBanner = () => {
   return (
-    <div className="w-full bg-gray-900 py-2 px-2 flex items-center gap-2">
+    <div className="w-full bg-gray-900 py-2 px-2 md:px-0 flex items-center gap-2">
       <div className="w-full max-w-5xl mx-auto flex justify-between items-center">
         <HighlightedText />
         <p className="text-white text-[10px] md:text-sm">
