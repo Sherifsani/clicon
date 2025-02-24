@@ -12,7 +12,7 @@ const Nav = () => {
   return (
     <nav className="flex items-center justify-between p-4 md:px-0 relative border-t-[0.5px] border-t-gray-300 max-w-5xl mx-auto">
       <div className="logo">
-        <img src="/Logo.svg" alt="clicon logo" className="h-10" />
+        <img src="/Logo.svg" alt="clicon logo" className="h-8" />
       </div>
       <div className="search-bar w-1/2 hidden sm:flex items-center bg-white rounded-sm overflow-hidden pr-5">
         <input
