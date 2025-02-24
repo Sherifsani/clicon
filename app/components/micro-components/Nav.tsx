@@ -10,22 +10,30 @@ const Nav = () => {
     setIsSearchOpen((prev) => !prev);
   };
   return (
-    <nav className="flex items-center justify-between p-4 relative">
+    <nav className="flex items-center justify-between p-4 md:px-0 relative border-t-[0.5px] border-t-gray-300 max-w-5xl mx-auto">
       <div className="logo">
         <img src="/Logo.svg" alt="clicon logo" className="h-10" />
       </div>
-      <div className="icons flex items-center gap-2">
+      <div className="search-bar w-1/2 flex items-center bg-white rounded-sm overflow-hidden pr-5">
+        <input
+          type="text"
+          placeholder="Search for anything..."
+          className="text-gray-500  focus:outline-none text-sm pl-5 py-3 w-full"
+              />
+              <img src="/MagnifyingGlass.svg" alt="" className="w-5 h-5 " />
+      </div>
+      <div className="icons flex items-center gap-2 sm:gap-3 md:gap-5">
         <FaSearch
-          className="w-5 md:w-[unset] text-gray-50 cursor-pointer"
+          className="w-5 md:w-[unset] text-gray-50 cursor-pointer sm:hidden"
           onClick={toggleSearchBar}
         />
         <img
           src="/ShoppingCartSimple.svg"
           alt=""
-          className="w-5 md:w-[unset] cursor-pointer"
+          className="w-5 h-5 cursor-pointer"
         />
-        <img src="/Heart.svg" alt="" className="w-5 md:w-[unset]" />
-        <img src="/User.svg" alt="" className="w-5 md:w-[unset]" />
+        <img src="/Heart.svg" alt="" className="w-5 h-5 " />
+        <img src="/User.svg" alt="" className="w-5 h-5 " />
       </div>
 
       <div
@@ -35,7 +43,7 @@ const Nav = () => {
       >
         <input
           type="text"
-          className="p-3 w-full mx-auto border-2 text-gray-500 focus:outline-none"
+          className="p-3 w-full mx-auto border-2 text-gray-500 focus:outline-none text-sm"
           placeholder="Search for anything..."
         />
       </div>

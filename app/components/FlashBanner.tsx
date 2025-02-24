@@ -1,8 +1,9 @@
-"use client"
+"use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HighlightedText from "@/app/components/micro-components/HighlightedText";
 import Link from "next/link";
+import { log } from "console";
 
 const FlashBanner = () => {
   const [show, setShow] = useState(true);
@@ -12,6 +13,7 @@ const FlashBanner = () => {
   const toggleShow = () => {
     setShow((prevShow) => !prevShow);
   };
+ 
   return (
     <div className="w-full bg-gray-900 py-2 px-2 md:px-0 flex items-center gap-2">
       <div className="w-full max-w-5xl mx-auto flex justify-between items-center">
