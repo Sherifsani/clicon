@@ -9,6 +9,7 @@ import {
   FaPinterest,
   FaChevronDown,
 } from "react-icons/fa";
+import Nav from "./micro-components/Nav";
 
 const Navbar = () => {
   const icons = (
@@ -40,7 +41,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <nav></nav>
+      <Nav/>
     </header>
   );
 };
