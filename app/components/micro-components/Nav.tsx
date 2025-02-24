@@ -14,7 +14,7 @@ const Nav = () => {
       <div className="logo">
         <img src="/Logo.svg" alt="clicon logo" className="h-10" />
       </div>
-      <div className="search-bar w-1/2 flex items-center bg-white rounded-sm overflow-hidden pr-5">
+      <div className="search-bar w-1/2 hidden sm:flex items-center bg-white rounded-sm overflow-hidden pr-5">
         <input
           type="text"
           placeholder="Search for anything..."
