@@ -22,6 +22,25 @@ const Navbar = () => {
       <FaPinterest className="text-white" />
     </div>
   );
+
+  const quickLinks = [
+    {
+      text: "Track Order",
+      img: "MapPinLine",
+    },
+    {
+      text: "Compare",
+      img: "ArrowsCounterClockwise",
+    },
+    {
+      text: "Customer Support",
+      img: "Headphones",
+    },
+    {
+      text: "Need Help",
+      img: "Info",
+    },
+  ];
   return (
     <header className="w-full bg-[#1B6392]">
       <FlashBanner />
@@ -41,7 +60,35 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <Nav/>
+      <hr className="w-full border-no bg-gray-300 opacity-50" />
+
+      <Nav />
+      <div className="bottom  bg-white py-3 px-4 md:px-0  text-[10px] text-gray-600">
+        <div className="flex max-w-5xl mx-auto items-center">
+          <span className="flex items-center gap-2 bg-gray-100 text-gray-900 px-4 py-3 shadow-sm rounded-md">
+            <span>All Category</span>
+            <img src="/CaretDown.svg" alt="" />
+          </span>
+          <div className="flex">
+            {quickLinks.map((link, i) => (
+              <span
+                key={i}
+                className="px-4 py-3 flex items-center gap-2 flex-col sm:flex-row"
+              >
+                <img src={`/${link.img}.svg`} className="w-4 h-4" alt="" />
+                <span className="hidden md:inline ">{link.text}</span>
+              </span>
+            ))}
+          </div>
+          <div className="phone flex flex-row ml-auto items-center gap-2">
+            <img src="/PhoneCall.svg" className="w-5 h-5" alt="phone" />
+            <span className="hidden md:inline text-[12px] font-semibold">
+              +234-806-051-7731
+            </span>
+          </div>
+        </div>
+      </div>
+      <hr className="w-full border-gray-200 opacity-100" />
     </header>
   );
 };

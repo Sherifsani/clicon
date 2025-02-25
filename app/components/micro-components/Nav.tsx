@@ -10,7 +10,7 @@ const Nav = () => {
     setIsSearchOpen((prev) => !prev);
   };
   return (
-    <nav className="flex items-center justify-between p-4 md:px-0 relative border-t-[0.5px] border-t-gray-300 max-w-5xl mx-auto">
+    <nav className="flex items-center justify-between p-4 md:px-0 relative max-w-5xl mx-auto">
       <div className="logo">
         <img src="/Logo.svg" alt="clicon logo" className="h-8" />
       </div>
@@ -38,7 +38,7 @@ const Nav = () => {
 
       <div
         className={`search-bar absolute transition-all left-0 bottom-0 w-full px-4 -z-10 ${
-          isSearchOpen ? "translate-y-full block" : ""
+          isSearchOpen ? "translate-y-full block z-10" : ""
         }`}
       >
         <input
