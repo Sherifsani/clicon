@@ -4,7 +4,7 @@ import ShopNowButton from "./ShopNowButton";
 
 const HeroCard = () => {
   return (
-    <div className="bg-gray-200 rounded-md pl-6 py-6 flex flex-col-reverse sm:flex-row items-center col-span-2 row-span-2 justify-between">
+    <div className="bg-gray-200 rounded-md md:pl-6 py-6 flex flex-col-reverse sm:flex-row items-center col-span-2 row-span-2 justify-between">
       <div className="texts flex flex-col gap-5 items-start">
         <div className="flex items-center gap-2 -mb-3">
           <div className="bg-secondary-600 w-6 h-[2px]"></div>
