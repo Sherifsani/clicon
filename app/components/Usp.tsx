@@ -1,6 +1,7 @@
 import React from "react";
 
 const Usp = () => {
+    // data
     const data = [
       {
         img: "/Package.png",
@@ -24,9 +25,9 @@ const Usp = () => {
       },
     ];
   return (
-    <div className="flex w-full flex-wrap justify-between mt-8 rounded-md border py-4 md:py-6 ">
+    <div className="flex flex-col md:flex-row w-full flex-wrap justify-between mt-8 rounded-md border py-4 md:py-6 ">
           {data.map(({ img, head, desc }, idx) => (
-              <div key={idx} className={`flex items-center justify-center w-1/4 gap-4 ${
+              <div key={idx} className={`flex items-center justify-center w-full md:w-1/4 gap-4 ${
                   idx !== data.length - 1 ? "md:border-r" : "md:border-r-0"
               } `}>
             <img src={img} alt={`${head} icon`} className="w-10 h-10" />
