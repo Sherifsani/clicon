@@ -19,7 +19,8 @@ const data = [
   {
     image: "controller.png",
     description: "4K UHD LED Smart TV with Chromecast Built-in",
-    price: "$150",
+      price: "$150",
+    badge:"19% OFF"
   },
   {
     image: "dellPhone.png",
@@ -64,8 +65,15 @@ const GridCard = ({
   prevPrice,
 }: GridCardProps) => {
   return (
-    <div className="flex flex-col p-2 w-full h-full border-[.5px] justify-between">
-      
+    <div className="flex flex-col p-2 w-full h-full border-[.5px] justify-between relative">
+      {badge && (
+        <Badge
+          text={badge}
+          color="bg-gray-400"
+          textColor="text-white"
+          position="left-1"
+        />
+      )}
       <div className="img">
         <img src={`/${image}`} alt="" />
       </div>
@@ -81,11 +89,17 @@ const DealsGrid = () => {
   return (
     <div className="w-full grid grid-cols-1 md:grid-cols-5">
       <div className="row-span-2 flex flex-col gap-3 relative p-2 h-full border-[.5px] justify-between">
-        <Badge text="32% OFF" position="left-1" color="bg-warning-400" />
+        <Badge
+          text="32% OFF"
+          position="left-1"
+          color="bg-warning-400"
+          textColor="text-gray-900"
+        />
         <Badge
           text="HOT"
           position="left-1 translate-y-full mt-1"
           color="bg-danger-500"
+          textColor="text-gray-100"
         />
         <img src="/playstation.png" alt="" className="" />
         <div className="desc flex flex-col gap-1">
@@ -122,8 +136,8 @@ const DealsGrid = () => {
           </div>
         </div>
       </div>
-      {data.map(({ image, description, price }, idx) => (
-        <GridCard image={image} description={description} price={price} />
+      {data.map(({ image, description, price, badge }, idx) => (
+          <GridCard image={image} description={description} price={price} badge={ badge} />
       ))}
     </div>
   );
