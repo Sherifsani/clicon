@@ -10,6 +10,7 @@ export default {
     extend: {
       colors: {
         "warning-300": "#F3DE6D",
+        "warning-400": "#EFD33D",
         "warning-500": "#EBC80C",
         "gray-900": "#191C1F",
         "gray-800": "#303639",
@@ -18,6 +19,8 @@ export default {
         "secondary-500": "#2DA5F3",
         "secondary-600": "#2484C2",
         "primary-500": "#FA8232",
+        "primary-100": "#FFE7D6",
+        "danger-500": "#EE5858",
       },
     },
   },
