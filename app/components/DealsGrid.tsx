@@ -65,7 +65,7 @@ const GridCard = ({
   prevPrice,
 }: GridCardProps) => {
   return (
-    <div className="flex flex-col p-2 w-full h-full border-[.5px] justify-between relative cursor-pointer hover:border-gray-300">
+    <div className="flex flex-col p-2 w-full h-full border-[.5px] justify-between items-center relative cursor-pointer hover:border-gray-300">
       {badge && (
         <Badge
           text={badge}
@@ -87,7 +87,7 @@ const GridCard = ({
 
 const DealsGrid = () => {
   return (
-    <div className="w-full grid grid-cols-1 md:grid-cols-5">
+    <div className="w-full grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-0">
       <div className="row-span-2 flex flex-col gap-3 relative p-2 h-full border-[.5px] justify-between">
         <Badge
           text="32% OFF"

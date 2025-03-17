@@ -4,7 +4,7 @@ import ShopNowButton from "./micro-components/ShopNowButton";
 
 const HeroGrids = () => {
   return (
-    <div className="flex flex-col p-4 sm:p-0 md:grid grid-cols-3 grid-rows-2 gap-4">
+    <div className="flex flex-col p-4 sm:p-0 md:grid grid-cols-3 grid-rows-2 gap-4 overflow-x-hidden">
       <HeroCard />
       <div className="bg-gray-900 rounded-md flex justify-between h-full">
         <div className="text w-1/2 flex flex-col gap-2 items-start pl-5 py-4 md:py-0 justify-center">

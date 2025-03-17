@@ -9,7 +9,7 @@ import Category from "./components/Category";
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-5xl mt-8 mb-[200px]">
+    <div className="mx-auto max-w-5xl mt-8 mb-[200px] ">
       <HeroGrids />
       <Usp />
       <BestDeals />

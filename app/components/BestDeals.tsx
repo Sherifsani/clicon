@@ -32,7 +32,7 @@ const BestDeals = () => {
   const seconds = totalSeconds % 60;
 
   return (
-    <section className="mt-14">
+    <section className="mt-14 w-full px-4 md:px-0">
       <div className="head flex flex-col md:flex-row items-center w-full gap-5 mb-5">
         <h2 className="text-gray-900 text-xl font-semibold">Best Deals</h2>
         <div className="flex items-center gap-3">
