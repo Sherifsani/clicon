@@ -137,7 +137,7 @@ const DealsGrid = () => {
         </div>
       </div>
       {data.map(({ image, description, price, badge }, idx) => (
-          <GridCard image={image} description={description} price={price} badge={ badge} />
+          <GridCard image={image} description={description} price={price} badge={ badge} key={idx} />
       ))}
     </div>
   );

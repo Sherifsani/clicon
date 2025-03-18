@@ -2,13 +2,20 @@
 
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
+import ShoppingCart from "../ShoppingCart";
 
 const Nav = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   const toggleSearchBar = () => {
     setIsSearchOpen((prev) => !prev);
   };
+
+  const toggleCart = () => {
+    setIsCartOpen((prev) => !prev);
+  };
+
   return (
     <nav className="flex items-center justify-between p-4 md:px-0 relative max-w-5xl mx-auto">
       <div className="logo">
@@ -19,19 +26,22 @@ const Nav = () => {
           type="text"
           placeholder="Search for anything..."
           className="text-gray-500  focus:outline-none text-sm pl-5 py-3 w-full"
-              />
-              <img src="/MagnifyingGlass.svg" alt="" className="w-5 h-5 " />
+        />
+        <img src="/MagnifyingGlass.svg" alt="" className="w-5 h-5 " />
       </div>
       <div className="icons flex items-center gap-2 sm:gap-3 md:gap-5">
         <FaSearch
           className="w-5 md:w-[unset] text-gray-50 cursor-pointer sm:hidden"
           onClick={toggleSearchBar}
         />
-        <img
-          src="/ShoppingCartSimple.svg"
-          alt=""
-          className="w-5 h-5 cursor-pointer"
-        />
+        <div className="">
+          <img
+            src="/ShoppingCartSimple.svg"
+            alt=""
+            className="w-5 h-5 cursor-pointer"
+            onClick={toggleCart}
+          />
+        </div>
         <img src="/Heart.svg" alt="" className="w-5 h-5 " />
         <img src="/User.svg" alt="" className="w-5 h-5 " />
       </div>
@@ -47,6 +57,7 @@ const Nav = () => {
           placeholder="Search for anything..."
         />
       </div>
+      {isCartOpen && <ShoppingCart />}
     </nav>
   );
 };
