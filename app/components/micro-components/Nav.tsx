@@ -3,10 +3,12 @@
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import ShoppingCart from "../ShoppingCart";
+import SignInCard from "../SignInCard"
 
 const Nav = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isUserOpen, setIsUserOpen] = useState(false);
 
   const toggleSearchBar = () => {
     setIsSearchOpen((prev) => !prev);
@@ -14,6 +16,11 @@ const Nav = () => {
 
   const toggleCart = () => {
     setIsCartOpen((prev) => !prev);
+    setIsUserOpen(false)
+  };
+  const toggleUser = () => {
+    setIsUserOpen((prev) => !prev);
+    setIsCartOpen(false)
   };
 
   return (
@@ -43,7 +50,9 @@ const Nav = () => {
           />
         </div>
         <img src="/Heart.svg" alt="" className="w-5 h-5 " />
-        <img src="/User.svg" alt="" className="w-5 h-5 " />
+        <div>
+          <img src="/User.svg" alt="" className="w-5 h-5 " onClick={toggleUser} />
+        </div>
       </div>
 
       <div
@@ -58,6 +67,7 @@ const Nav = () => {
         />
       </div>
       {isCartOpen && <ShoppingCart />}
+      {isUserOpen && <SignInCard/>}
     </nav>
   );
 };
