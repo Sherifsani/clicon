@@ -4,15 +4,16 @@ import { BentoGrid, BentoGridItem } from "@/app/components/ui/bento-grid";
 
 export function HeroGrid() {
   return (
-    <BentoGrid className="max-w-4xl mx-auto">
+    <BentoGrid className="">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
           title={item.title}
-          description={item.description}
-          header={item.header}
-          // icon={item.icon}
-          className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+          stars={item.stars}
+          ratings={item.ratings}
+          price={item.price}
+          img={item.img}
+          // className={i === 3 || i === 6 ? "md:col-span-2" : ""}
         />
       ))}
     </BentoGrid>
@@ -23,39 +24,67 @@ const Skeleton = () => (
 );
 const items = [
   {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
+    title: "TTOZO T6 True Wireless Earbuds Bluetooth Headphone",
+    stars: 5,
+    ratings: 765,
+    price: 70,
     header: <Skeleton />,
+    img: "featured-1.png",
   },
   {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
+    title: "TTOZO T6 True Wireless Earbuds Bluetooth Headphone",
+    stars: 4,
+    ratings: 550,
+    price: 2300,
     header: <Skeleton />,
+    img: "featured-2.png",
   },
   {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
+    title: "TTOZO T6 True Wireless Earbuds Bluetooth Headphone",
+    stars: 5,
+    ratings: 500,
+    price: 170,
     header: <Skeleton />,
+    img: "featured-3.png",
   },
   {
-    title: "The Power of Communication",
-    description:
-      "Understand the impact of effective communication in our lives.",
+    title: "TTOZO T6 True Wireless Earbuds Bluetooth Headphone",
+    stars: 5,
+    ratings: 75,
+    price: 110,
     header: <Skeleton />,
+    img: "featured-4.png",
   },
   {
-    title: "The Pursuit of Knowledge",
-    description: "Join the quest for understanding and enlightenment.",
+    title: "TTOZO T6 True Wireless Earbuds Bluetooth Headphone",
+    stars: 5,
+    ratings: 25,
+    price: 410,
     header: <Skeleton />,
+    img: "featured-1.png",
   },
   {
-    title: "The Joy of Creation",
-    description: "Experience the thrill of bringing ideas to life.",
+    title: "TTOZO T6 True Wireless Earbuds Bluetooth Headphone",
+    stars: 2,
+    ratings: 345,
+    price: 560,
     header: <Skeleton />,
+    img: "featured-5.png",
   },
   {
-    title: "The Spirit of Adventure",
-    description: "Embark on exciting journeys and thrilling discoveries.",
+    title: "TTOZO T6 True Wireless Earbuds Bluetooth Headphone",
+    stars: 5,
+    ratings: 1084,
+    price: 100,
     header: <Skeleton />,
+    img: "featured-7.png",
+  },
+  {
+    title: "TTOZO T6 True Wireless Earbuds Bluetooth Headphone",
+    stars: 3,
+    ratings: 75,
+    price: 80,
+    header: <Skeleton />,
+    img: "featured-6.png",
   },
 ];

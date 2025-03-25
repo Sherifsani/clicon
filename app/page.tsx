@@ -6,6 +6,7 @@ import HeroGrids from "./components/HeroGrids";
 import Usp from "./components/Usp";
 import BestDeals from "./components/BestDeals";
 import Category from "./components/Category";
+import FeaturedProducts from "./components/FeaturedProducts";
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
       <HeroGrids />
       <Usp />
       <BestDeals />
-      <Category/>
+      <Category />
+      <FeaturedProducts/>
     </div>
   );
 }
