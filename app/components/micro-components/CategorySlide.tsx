@@ -46,20 +46,19 @@ export default function CategorySlide() {
     <div className="relative">
       {/* Custom Navigation Buttons */}
       <button
-        className="bg-primary-500 rounded-full p-2 cursor-pointer absolute top-1/2 -translate-y-1/2 left-0 z-10 -translate-x-1/2"
+        className="bg-primary-500 rounded-full p-2 cursor-pointer absolute top-1/2 -translate-y-1/2 left-0 z-10 -translate-x-1/2 hidden md:block"
         onClick={() => swiperRef.current?.slidePrev()}
         title="Previous Slide"
       >
         <FaArrowLeft className="text-white" />
       </button>
       <button
-        className="bg-primary-500 rounded-full p-2 cursor-pointer absolute top-1/2 -translate-y-1/2 right-0 z-10 translate-x-1/2"
+        className="bg-primary-500 rounded-full p-2 cursor-pointer absolute top-1/2 -translate-y-1/2 right-0 z-10 translate-x-1/2 hidden md:block"
         onClick={() => swiperRef.current?.slideNext()}
         title="Next Slide"
       >
         <FaArrowRight className="text-white" />
       </button>
-      
 
       {/* Swiper Component */}
       <Swiper

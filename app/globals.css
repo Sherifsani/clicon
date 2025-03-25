@@ -9,10 +9,34 @@ body {
   scroll-behavior: smooth;
 }
 
-header{
+header {
   transition: .2s all ease;
 }
 
-.search-bar input{
+.search-bar input {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+}
+
+.featured-nav-list li {
+  position: relative;
+  cursor: pointer;
+}
+
+.featured-nav-list li::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #FA8232;
+  transform: translateX(-50%);
+  transition: all .3s ease;
+}
+
+.featured-nav-list li:hover::before {
+  width: 100%;
+}
+.active{
+  position: relative;
 }
