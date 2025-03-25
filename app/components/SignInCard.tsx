@@ -1,7 +1,8 @@
 import React from "react";
 import { IoEyeSharp } from "react-icons/io5";
-import { IoEyeSharpOff } from "react-icons/io5";
+// import { IoEyeSharpOff } from "react-icons/io5";
 import ShopNowButton from "./micro-components/ShopNowButton";
+import ButtonBordered from "./micro-components/ButtonBordered";
 
 const SignInCard = () => {
   return (
@@ -29,13 +30,14 @@ const SignInCard = () => {
             </span>
           </label>
 
-          <ShopNowButton text="Login" />
+          <ShopNowButton text="LOGIN" />
         </form>
-        <div className="flex items-center">
-          <hr />
-          Don't have an account
-          <hr />
+        <div className="flex items-center space-x-2 mt-5 mb-2">
+          <hr className="flex-grow border-gray-300" />
+          <span className="text-sm text-gray-500 text-[14px]">Don't have an account</span>
+          <hr className="flex-grow border-gray-300" />
         </div>
+        <ButtonBordered text="CREATE ACCOUNT" />
       </div>
     </div>
   );
