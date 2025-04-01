@@ -13,7 +13,7 @@ const Badge = ({
 }) => {
   return (
     <div
-      className={`${color} ${position} rounded-sm px-2 py-1 text-[10px] absolute top-1`}
+      className={`${color} ${position} rounded-sm px-2 py-1 text-[10px] absolute top-1 z-10`}
     >
       <p className={`${textColor}`}>{text}</p>
     </div>
@@ -21,3 +21,4 @@ const Badge = ({
 };
 
 export default Badge;
+ 

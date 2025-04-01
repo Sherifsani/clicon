@@ -11,6 +11,7 @@ const data = [
       "Bose Sport Earbuds - Wireless Earphones - Bluetooth In Ear...",
     price: "$2,300",
     badge: "SOLD OUT",
+    badgeColor: "gray-400"
   },
   {
     image: "phone4g.png",
@@ -20,8 +21,9 @@ const data = [
   {
     image: "controller.png",
     description: "4K UHD LED Smart TV with Chromecast Built-in",
-      price: "$150",
-    badge:"19% OFF"
+    price: "$150",
+    badge: "19% OFF",
+    badgeColor: "warning-500"
   },
   {
     image: "dellPhone.png",
@@ -32,6 +34,8 @@ const data = [
     image: "portable.png",
     description: "Portable Wshing Machine, 11lbs capacity Model 18NMFIAM",
     price: "$70",
+    badge: "HOT",
+    badgeColor: "danger-500"
   },
   {
     image: "monitor.png",
@@ -56,6 +60,8 @@ interface GridCardProps {
   price: string;
   badge?: string;
   prevPrice?: string;
+  badgeColor?:string;
+  badgeText?:string;
 }
 
 const GridCard = ({
@@ -63,6 +69,8 @@ const GridCard = ({
   description,
   price,
   badge,
+  badgeColor,
+  badgeText,
   prevPrice,
 }: GridCardProps) => {
   const [isHovered, setIsHovered] = React.useState(false);
@@ -76,8 +84,8 @@ const GridCard = ({
       {badge && (
         <Badge
           text={badge}
-          color="bg-gray-400"
-          textColor="text-white"
+          color={`bg-${badgeColor || 'gray-400'}`}
+          textColor={badgeColor?.includes('warning') ? 'text-gray-900' : 'text-white'}
           position="left-1"
         />
       )}
@@ -144,8 +152,8 @@ const DealsGrid = () => {
           </div>
         </div>
       </div>
-      {data.map(({ image, description, price, badge }, idx) => (
-          <GridCard image={image} description={description} price={price} badge={ badge} key={idx} />
+      {data.map(({ image, description, price, badge, badgeColor, badgeText }, idx) => (
+          <GridCard image={image} description={description} price={price} badge={ badge} badgeColor={badgeColor} badgeText={badgeText} key={idx} />
       ))}
     </div>
   );
