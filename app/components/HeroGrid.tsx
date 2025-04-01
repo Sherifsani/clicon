@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 import { BentoGrid, BentoGridItem } from "@/app/components/ui/bento-grid";
+import Overlay from "./Overlay";
 
 export function HeroGrid() {
   return (

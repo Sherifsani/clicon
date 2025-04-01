@@ -2,6 +2,7 @@ import React from "react";
 import { BiStar, BiHeart, BiCart } from "react-icons/bi";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import Badge from "./micro-components/Badge";
+import Overlay from "./Overlay";
 
 const data = [
   {
@@ -64,8 +65,14 @@ const GridCard = ({
   badge,
   prevPrice,
 }: GridCardProps) => {
+  const [isHovered, setIsHovered] = React.useState(false);
+
   return (
-    <div className="flex flex-col p-2 w-full h-full border-[.5px] justify-between items-center relative cursor-pointer hover:border-gray-300">
+    <div 
+      className="flex flex-col p-2 w-full h-full border-[.5px] justify-between items-center relative cursor-pointer hover:border-gray-300"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       {badge && (
         <Badge
           text={badge}
@@ -74,7 +81,8 @@ const GridCard = ({
           position="left-1"
         />
       )}
-      <div className="img">
+      <div className="img relative">
+        {isHovered && <Overlay />}
         <img src={`/${image}`} alt="" />
       </div>
       <div>
