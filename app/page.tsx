@@ -7,6 +7,7 @@ import Usp from "./components/Usp";
 import BestDeals from "./components/BestDeals";
 import Category from "./components/Category";
 import FeaturedProducts from "./components/FeaturedProducts";
+import MidSectionBanner from "./components/MidSectionBanner"
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <BestDeals />
       <Category />
       <FeaturedProducts/>
+      <MidSectionBanner/>
     </div>
   );
 }
