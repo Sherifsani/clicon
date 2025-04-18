@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { HeroGrid } from "./HeroGrid";
 import FeaturedCard from "./FeaturedCard";
-import { div } from "motion/react-client";
 
 const FeaturedProducts = () => {
   return (

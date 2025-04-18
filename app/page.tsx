@@ -8,16 +8,18 @@ import BestDeals from "./components/BestDeals";
 import Category from "./components/Category";
 import FeaturedProducts from "./components/FeaturedProducts";
 import MidSectionBanner from "./components/MidSectionBanner"
+import ComputerAccessories from "./components/ComputerAccessories";
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-7xl mt-8 mb-[200px] ">
+    <div className="mx-auto max-w-7xl mt-8 mb-[200px] flex flex-col gap-7">
       <HeroGrids />
       <Usp />
       <BestDeals />
       <Category />
       <FeaturedProducts/>
-      <MidSectionBanner/>
+      <MidSectionBanner />
+      <ComputerAccessories />
     </div>
   );
 }
