@@ -61,7 +61,6 @@ interface GridCardProps {
   badge?: string;
   prevPrice?: string;
   badgeColor?:string;
-  badgeText?:string;
 }
 
 const GridCard = ({
@@ -70,7 +69,6 @@ const GridCard = ({
   price,
   badge,
   badgeColor,
-  badgeText,
   prevPrice,
 }: GridCardProps) => {
   const [isHovered, setIsHovered] = React.useState(false);
@@ -152,8 +150,8 @@ const DealsGrid = () => {
           </div>
         </div>
       </div>
-      {data.map(({ image, description, price, badge, badgeColor, badgeText }, idx) => (
-          <GridCard image={image} description={description} price={price} badge={ badge} badgeColor={badgeColor} badgeText={badgeText} key={idx} />
+      {data.map(({ image, description, price, badge, badgeColor}, idx) => (
+          <GridCard image={image} description={description} price={price} badge={ badge} badgeColor={badgeColor} key={idx} />
       ))}
     </div>
   );
