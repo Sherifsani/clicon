@@ -9,6 +9,7 @@ import Category from "./components/Category";
 import FeaturedProducts from "./components/FeaturedProducts";
 import MidSectionBanner from "./components/MidSectionBanner"
 import ComputerAccessories from "./components/ComputerAccessories";
+import MacBookBanner from "./components/MacBookBanner";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <FeaturedProducts/>
       <MidSectionBanner />
       <ComputerAccessories />
+      <MacBookBanner />
     </div>
   );
 }
