@@ -4,7 +4,7 @@ import { newsData } from "@/data";
 
 const LatestNews = () => {
   return (
-    <div className="mt-10">
+    <div className="mt-10 p-3 md:p-0">
       <h2 className="text-3xl text-gray-900 font-semibold mb-4 text-center">
         Latest News
       </h2>
