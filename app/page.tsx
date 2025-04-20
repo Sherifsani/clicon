@@ -11,10 +11,12 @@ import MidSectionBanner from "./components/MidSectionBanner"
 import ComputerAccessories from "./components/ComputerAccessories";
 import MacBookBanner from "./components/MacBookBanner";
 import LatestNews from "./components/LatestNews";
+import NewsLetter from "./components/NewsLetter";
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-7xl mt-8 mb-[200px] flex flex-col gap-7">
+    <>
+    <div className="mx-auto max-w-7xl mt-8 mb-10 flex flex-col gap-7">
       <HeroGrids />
       <Usp />
       <BestDeals />
@@ -24,6 +26,8 @@ export default function Home() {
       <ComputerAccessories />
       <MacBookBanner />
       <LatestNews />
-    </div>
+      </div>
+      <NewsLetter/>
+    </>
   );
 }
