@@ -88,8 +88,8 @@ const Footer = () => {
                 </div>
             </section>
 
-            <div className=" border-gray-100 py-6 w-full grid place-items-center border-t-[0.4px] text-gray-300">
-                <p>Kinbo - eCommerce Template © {new Date().getFullYear()}</p>
+            <div className=" border-gray-100 py-4 w-full grid place-items-center border-t-[0.1px] text-gray-00">
+                <p className="text-sm text-gray-200">Kinbo - eCommerce Template © {new Date().getFullYear()}</p>
             </div>
         </footer>
     )
